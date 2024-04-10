@@ -1,8 +1,8 @@
 # javascript-ru
 ___
 ### guess-number
-- ![2020-20-20](https://)
+- ![2012-12-12](https://)
 - [guess-number deploy](https://peccopa.github.io/javascript-ru/guess-number "guess-number deploy") - https://peccopa.github.io/javascript-ru/guess-number
->Responsive design, modal windows, carousel, active tabs, interactive map, validation form, mailer
+>Practicing skills: DOM
 - ***JAVASCRIPT, CSS, HTML***
 ___
