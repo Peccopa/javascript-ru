@@ -23,9 +23,14 @@ const btnCloseModalWindow = $('.close-modal-window');
 const btnsShowModalWindow = $All('.show-modal-window');
 
 btnsShowModalWindow.forEach(element => {
-  element.addEventListener('click', e => removeHiddenClass);
+  element.addEventListener('click', e => removeHiddenClass());
 });
 
 btnCloseModalWindow.addEventListener('click', addHiddenClass);
 overlay.addEventListener('click', addHiddenClass);
 
+document.addEventListener('keydown', e =>
+  !overlay.classList.contains('hidden') && e.key === 'Escape'
+    ? addHiddenClass()
+    : false
+);
