@@ -30,7 +30,7 @@ btnCloseModalWindow.addEventListener('click', addHiddenClass);
 overlay.addEventListener('click', addHiddenClass);
 
 document.addEventListener('keydown', e =>
-  !overlay.classList.contains('hidden') && e.key === 'Escape'
+  e.key === 'Escape' && !overlay.classList.contains('hidden')
     ? addHiddenClass()
     : false
 );
