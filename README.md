@@ -1,8 +1,8 @@
 # javascript-ru
 ___
-### guess-number
-- ![2012-12-12](https://)
-- [guess-number deploy](https://peccopa.github.io/javascript-ru/guess-number "guess-number deploy") - https://peccopa.github.io/javascript-ru/guess-number
+### branch: guess-number
+![2024-04-11](https://github.com/Peccopa/javascript-ru/assets/119999253/deb73192-1e95-45a4-82fb-ff1f869eb223)
 >Practicing skills: DOM
+- https://peccopa.github.io/javascript-ru/guess-number
 - ***JAVASCRIPT, CSS, HTML***
 ___
