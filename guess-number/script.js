@@ -1,62 +1,47 @@
 'use strict';
 
-// console.log(document.querySelector('.guess-message').textContent);
-// document.querySelector('.guess-message').textContent = 'Guessed!';
-// document.querySelector('.question').textContent = 7;
-// document.querySelector('.score').textContent = 11;
-// document.querySelector('.number-input').value = 13;
-// const eventHandler = () => {
-//   console.log(document.querySelector('.number-input').value);
-// };
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-document.querySelector('.check').addEventListener('click', () => {
-  const guessingNumber = Number(document.querySelector('.number-input').value);
+function $(selector) {
+  return document.querySelector(selector);
+}
+
+$('.check').addEventListener('click', () => {
+  const guessingNumber = Number($('.number-input').value);
   if (!guessingNumber) {
     // no input
-    document.querySelector('.guess-message').textContent = 'Введите число!';
+    $('.guess-message').textContent = 'Введите число!';
   } else if (guessingNumber === secretNumber) {
     // player won
-    document.querySelector('.question').textContent = secretNumber;
-    document.querySelector('.guess-message').textContent = 'Правильно!';
-    document.querySelector('body').style.backgroundColor = 'green';
-    document.querySelector('.question').style.width = '50rem';
+    $('.question').textContent = secretNumber;
+    $('.guess-message').textContent = 'Правильно!';
+    $('body').style.backgroundColor = 'green';
+    $('.question').style.width = '50rem';
     if (score > highscore) highscore = score;
-    document.querySelector('.highscore').textContent = highscore;
-  } else if (guessingNumber > secretNumber) {
-    // too high
+    $('.highscore').textContent = highscore;
+    // number from input is wrong
+  } else if (guessingNumber !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.guess-message').textContent = 'Слишком много!';
+      $('.guess-message').textContent =
+        guessingNumber > secretNumber ? 'Слишком много!' : 'Слишком мало!';
       score--;
-      document.querySelector('.score').textContent = score;
+      $('.score').textContent = score;
     } else {
-      document.querySelector('.guess-message').textContent = 'Вы проиграли!';
-      document.querySelector('.score').textContent = 0;
-    }
-  } else if (guessingNumber < secretNumber) {
-    // to low
-    if (score > 1) {
-      document.querySelector('.guess-message').textContent = 'Слишком мало!';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.guess-message').textContent = 'Вы проиграли!';
-      document.querySelector('.score').textContent = 0;
+      $('.guess-message').textContent = 'Вы проиграли!';
+      $('.score').textContent = 0;
     }
   }
 });
 
-document.querySelector('.again').addEventListener('click', () => {
+$('.again').addEventListener('click', () => {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
-
-  document.querySelector('.question').textContent = '???';
-  document.querySelector('.question').style.width = '25rem';
-  document.querySelector('.guess-message').textContent = 'Начни угадывать!';
-  document.querySelector('.score').textContent = score;
-  document.querySelector('.number-input').value = '';
-  document.querySelector('body').style.backgroundColor = 'black';
+  $('.question').textContent = '???';
+  $('.question').style.width = '25rem';
+  $('.guess-message').textContent = 'Начни угадывать!';
+  $('.score').textContent = score;
+  $('.number-input').value = '';
+  $('body').style.backgroundColor = 'black';
 });
