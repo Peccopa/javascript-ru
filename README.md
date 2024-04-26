@@ -1,6 +1,7 @@
 # javascript-ru
 ### branch: dices-game
-![2024-04-26](https://peccopa.github.io/javascript-ru/dices-game/dices-game)
+![2024-04-26](https://github.com/Peccopa/javascript-ru/assets/119999253/dcda15ae-d50a-4434-9986-1a429d8dd83f)
+
 >Practicing skills: DOM
 - https://peccopa.github.io/javascript-ru/dices-game
 - ***JAVASCRIPT, CSS, HTML***
