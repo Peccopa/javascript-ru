@@ -20,22 +20,49 @@ diceElement.classList.add('hidden');
 const totalScores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+let isPlaying = true;
+
+function switchActivePlayer() {
+  currentScore = 0;
+  document.getElementById(`current--${activePlayer}`).textContent =
+    currentScore;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0Element.classList.toggle('player--active');
+  player1Element.classList.toggle('player--active');
+}
 
 // Roll the dice
 btnRoll.addEventListener('click', () => {
-  const diceNumber = Math.trunc(Math.random() * 6) + 1;
-  diceElement.classList.remove('hidden');
-  diceElement.src = `dice${diceNumber}.png`;
-  if (diceNumber !== 1) {
-    currentScore += diceNumber;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-  } else {
-    currentScore = 0;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    player0Element.classList.toggle('player--active');
-    player1Element.classList.toggle('player--active');
+  if (isPlaying) {
+    const diceNumber = Math.trunc(Math.random() * 6) + 1;
+    diceElement.classList.remove('hidden');
+    diceElement.src = `dice${diceNumber}.png`;
+    if (diceNumber !== 1) {
+      currentScore += diceNumber;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      switchActivePlayer();
+    }
+  }
+});
+
+btnHold.addEventListener('click', () => {
+  if (isPlaying) {
+    totalScores[activePlayer] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent =
+      totalScores[activePlayer];
+    if (totalScores[activePlayer] >= 20) {
+      isPlaying = false;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+        diceElement.classList.add('hidden');
+    } else {
+      switchActivePlayer();
+    }
   }
 });
