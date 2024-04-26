@@ -12,15 +12,27 @@ const btnHold = document.querySelector('.btn--hold');
 const player0Element = document.querySelector('.player--0');
 const player1Element = document.querySelector('.player--1');
 
-// Game initial conditions
-score0Element.textContent = 0;
-score1Element.textContent = 0;
-diceElement.classList.add('hidden');
+let totalScores, currentScore, activePlayer, isPlaying;
 
-const totalScores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let isPlaying = true;
+// Game initial conditions
+function initGame() {
+  totalScores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  isPlaying = true;
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  current0Element.textContent = 0;
+  current1Element.textContent = 0;
+  player0Element.classList.remove('player--winner');
+  player1Element.classList.remove('player--winner');
+  player0Element.classList.remove('player--active');
+  player1Element.classList.remove('player--active');
+  player0Element.classList.add('player--active');
+  diceElement.classList.add('hidden');
+}
+
+initGame();
 
 function switchActivePlayer() {
   currentScore = 0;
@@ -60,9 +72,11 @@ btnHold.addEventListener('click', () => {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
-        diceElement.classList.add('hidden');
+      diceElement.classList.add('hidden');
     } else {
       switchActivePlayer();
     }
   }
 });
+
+btnNew.addEventListener('click', initGame);
