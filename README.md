@@ -1,2 +1,3 @@
 ﻿# friday-live-coding
-- Fake sunday commit
+- Fake Sunday commit
+- Fake Monday commit
