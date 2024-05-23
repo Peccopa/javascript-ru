@@ -8,3 +8,10 @@
  *
  * 4. Вызовите функцию
  */
+
+function foo() {
+  console.log('Bonza');
+}
+
+foo();
+foo();

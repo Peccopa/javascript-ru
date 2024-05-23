@@ -10,3 +10,13 @@
  *
  * 5. Перепишите функцию так, чтобы результат возвращался неявно
  */
+
+// const helloWorld = () => {
+//   return 'Hello World!';
+// };
+
+const helloWorld = () => 'Hello World!';
+
+console.log(helloWorld());
+
+

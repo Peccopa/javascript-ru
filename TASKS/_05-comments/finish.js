@@ -7,3 +7,22 @@
  *
  * 3. Создайте многострочный комментарий
  */
+
+// comment
+
+const a = 1; // comment
+
+/*
+  comment
+  comment
+  comment
+ */
+
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ */
