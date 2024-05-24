@@ -12,3 +12,34 @@
  *
  * 4. Вызовите функцию
  */
+
+/**
+ * Возвращает разницу двух чисел
+ * @param {number} num1 Первый параметр функции
+ * @param {number} num2 Второй параметр функции
+ * @returns {number} Возвращает разницу чисел
+ */
+
+function diff(num1, num2) {
+  return num1 - num2;
+}
+console.log(diff(5, 3));
+
+/**
+ * Sums up the numbers
+ * @param {number} num1 first param
+ * @param {number} num2 second param
+ * @returns return sum of numbers
+ */
+function sum(num1, num2) {
+  return num1 + num2;
+}
+console.log(sum(5, 8));
+
+/**
+ * Descr
+ * @param {*} a text
+ * @param {*} b text
+ * @returns return
+ */
+const mult = (a, b) => a * b;

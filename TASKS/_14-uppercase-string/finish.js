@@ -12,3 +12,18 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const str1 = 'Hello!';
+console.log(str1 instanceof String);
+console.log(typeof str1);
+const str2 = str1.toUpperCase();
+console.log(str2);
+str2.aaa = 1;
+console.log(str2);
+console.log('---');
+
+const test = new String('Bonza');
+console.log(test instanceof String);
+console.log(typeof test);
+console.log(test);
+console.log(test.toUpperCase());

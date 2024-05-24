@@ -6,3 +6,9 @@
  *
  * 3. Выведите значение второй переменной в консоль
  */
+
+const str = 'Good Morning';
+const newStr = str.substring(0, 5) + 'Evening';
+// const newStr = str.replace('Morning','Evening');
+
+console.log(str, newStr);

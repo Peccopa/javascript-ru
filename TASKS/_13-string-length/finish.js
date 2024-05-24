@@ -4,3 +4,6 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const str = 'Hello World!';
+console.log(str.length);
