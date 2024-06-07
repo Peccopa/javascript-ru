@@ -20,3 +20,8 @@ const rps = (p1, p2) => {
 };
 
 console.log(rps('scissors', 'paper'));
+
+const obj = {
+  name: 'John',
+};
+
