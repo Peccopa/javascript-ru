@@ -12,4 +12,15 @@ const myObject = {
   key3: 'abc',
   key4: null,
   key10: NaN,
+};
+
+for (const key in myObject) {
+  if ((myObject.hasOwnProperty(key) && key === 'key1') || key === 'key3')
+    console.log(myObject[key]);
+}
+
+const arrProp = Object.keys(myObject);
+for (const key of arrProp) {
+  if ((key === 'key1') || key === 'key3')
+    console.log(myObject[key]);
 }
