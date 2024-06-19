@@ -16,9 +16,24 @@ const posts = [
   { postId: 1355, commentsQuantity: 5 },
   { postId: 5131, commentsQuantity: 13 },
   { postId: 6134, commentsQuantity: 2 },
-]
+];
 
-console.log(findPostById(6134, posts)) // { postId: 6134, commentsQuantity: 2 }
+const findPostById = function (ID, posts) {
+  for (const post of posts) {
+    if (post.postId === ID) {
+      console.log(ID);
+      return post;
+    }
+  }
+};
 
-console.log(findPostById(4511, posts)) // undefined
+// const findPostById = function (ID, posts) {
+//   return posts.find((element) => {
+//     console.log(element.postId);
+//     return ID === element.postId;
+//   });
+// };
 
+console.log(findPostById(6134, posts)); // { postId: 6134, commentsQuantity: 2 }
+
+console.log(findPostById(4511, posts)); // undefined
