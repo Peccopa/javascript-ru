@@ -1,5 +1,5 @@
 ﻿# javascript-ru
-### branch: dices-game
+<!-- ### branch: dices-game
 ![2024-04-26](https://peccopa.github.io/javascript-ru/dices-game/dices-game.jpg)
 >Practicing skills: DOM
 - https://peccopa.github.io/javascript-ru/dices-game
@@ -17,4 +17,4 @@ ___
 >Practicing skills: DOM
 - https://peccopa.github.io/javascript-ru/guess-number
 - ***JAVASCRIPT, CSS, HTML***
-___
+___ -->
