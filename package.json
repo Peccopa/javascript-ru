@@ -1,0 +1,16 @@
+{
+  "name": "javascript-ru",
+  "version": "1.0.0",
+  "description": "<!-- ### branch: dices-game\r ![2024-04-26](https://peccopa.github.io/javascript-ru/dices-game/dices-game.jpg)\r >Practicing skills: DOM\r - https://peccopa.github.io/javascript-ru/dices-game\r - ***JAVASCRIPT, CSS, HTML***\r ___\r ### branch: modal-window\r ![2024-04-11](https://github.com/Peccopa/javascript-ru/assets/119999253/24641a55-a635-42d1-a9aa-6ad0ac9087e2)\r >Practicing skills: DOM  \r >UI-Components, active cross/Esc, overlay missclick\r - https://peccopa.github.io/javascript-ru/modal-window\r - ***JAVASCRIPT, CSS, HTML***\r ___\r ### branch: guess-number\r ![2024-04-11](https://github.com/Peccopa/javascript-ru/assets/119999253/deb73192-1e95-45a4-82fb-ff1f869eb223)\r >Practicing skills: DOM\r - https://peccopa.github.io/javascript-ru/guess-number\r - ***JAVASCRIPT, CSS, HTML***\r ___ -->",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/style.scss sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.6"
+  }
+}
