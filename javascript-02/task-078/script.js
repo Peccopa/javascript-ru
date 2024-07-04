@@ -1,6 +1,6 @@
 'use strict';
 
-const card = '1234123412341234';
+// const card = '1234123412341234';
 
-console.log('**** **** **** ' + card.slice(-4));
-console.log(card.slice(-4).padStart(16, '*'));
+// console.log('**** **** **** ' + card.slice(-4));
+// console.log(card.slice(-4).padStart(16, '*'));
