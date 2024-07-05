@@ -9,6 +9,8 @@
  * 3. Оригинальный массив должен остаться без изменений
  */
 
+const { log } = require('console');
+
 const inputProducts = [
   {
     title: 'Phone case',
@@ -34,10 +36,17 @@ const inputProducts = [
     quantity: 2,
     category: 'Watches',
   },
-]
+];
 
-// const sortedProducts = sortProductsByPrice(inputProducts)
+const sortProductsByPrice = function (products) {
+  // products = [...products];
+  return Array.from(products).sort((a, b) => a.price - b.price);
+};
 
-// console.log(sortedProducts) // Массив отсортированных товаров
+const sortedProducts = sortProductsByPrice(inputProducts);
 
-// console.log(inputProducts) // Оригинальный массив не должен измениться
+console.log(sortedProducts); // Массив отсортированных товаров
+
+console.log(inputProducts); // Оригинальный массив не должен измениться
+
+console.log(JSON.stringify(sortedProducts) === JSON.stringify(inputProducts));

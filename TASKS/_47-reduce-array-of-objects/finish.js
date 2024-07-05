@@ -32,7 +32,7 @@ const inputPosts = [
 
 const popularPostsIds = function (posts, minimalComentsQty) {
   return posts.reduce((acc, curr) => {
-    if (curr.comments > minimalComentsQty) acc.push(curr.postId);
+    if (curr.comments >= minimalComentsQty) acc.push(curr.postId);
     return acc;
   }, []);
 };

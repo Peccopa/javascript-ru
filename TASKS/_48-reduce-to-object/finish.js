@@ -7,6 +7,8 @@
  * равными сумме всех количеств в каждой категории
  */
 
+const { log } = require('console');
+
 const inputProducts = [
   {
     title: 'Phone case',
@@ -32,9 +34,18 @@ const inputProducts = [
     quantity: 2,
     category: 'Watches',
   },
-]
+];
 
-console.log(quantitiesByCategories(inputProducts))
+const quantitiesByCategories = function (products) {
+  return products.reduce((acc, curr) => {
+    acc[curr.category]
+      ? (acc[curr.category] += curr.quantityn)
+      : (acc[curr.category] = curr.quantity);
+    return acc;
+  }, {});
+};
+
+console.log(quantitiesByCategories(inputProducts));
 /* {
   Accessories: 3,
   Phones: 1,
