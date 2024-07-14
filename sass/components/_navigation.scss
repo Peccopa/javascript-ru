@@ -1,0 +1,14 @@
+.navigavion {
+  display: flex;
+  gap: 17px;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  &__link {
+    list-style: none;
+    cursor: pointer;
+    @extend %transition;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
