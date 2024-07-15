@@ -325,7 +325,11 @@ article {
   transition: all 0.3s ease-in-out;
 }
 
-h1 {
+.button, body {
+  font-family: "Open Sans", "Verdana", "sans-serif";
+}
+
+.promo__text, .link-button, h1 {
   font-family: "Poppins", "Verdana", "sans-serif";
 }
 
@@ -335,7 +339,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", "Verdana", "sans-serif";
+  line-height: 2.6rem;
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
@@ -403,6 +409,10 @@ h5 {
   border: 1px solid #ff7549;
 }
 
+.link-button {
+  color: #ff9900;
+}
+
 .logo-svg:hover .logo-path {
   fill: #ff9900;
 }
@@ -455,6 +465,15 @@ h5 {
   display: flex;
   gap: 43px;
   align-items: center;
+}
+
+.promo__text {
+  max-width: 487px;
+  margin: 0 0 45px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .navigavion {
