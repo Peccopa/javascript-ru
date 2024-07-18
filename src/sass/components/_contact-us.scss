@@ -1,6 +1,19 @@
 .contact-us {
   background: $color-background;
   padding: 62px 82px;
+  @include media-tablet {
+    text-align: center;
+  }
+  @include media-tablet {
+    padding: 48px 0;
+  }
+}
+
+.contact-us-wrapper {
+  gap: 20px;
+  @include media-tablet {
+    flex-direction: column;
+  }
 }
 
 .contact-us__title {
@@ -44,6 +57,7 @@
 
 .contact-us__line {
   margin-bottom: 19px;
+  gap: 20px;
 }
 
 .contact-us__button {

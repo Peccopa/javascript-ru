@@ -9,6 +9,7 @@
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  white-space: nowrap;
   &_bordered {
     background: $color-light;
     border: 1px solid $color-border;
@@ -38,4 +39,5 @@
 
 .link-button__text {
   margin-left: 9px;
+  white-space: nowrap;
 }

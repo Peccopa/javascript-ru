@@ -8,9 +8,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include media-tablet {
+    padding-left: 24px;
+  }
 }
 
 .header__buttons {
   display: flex;
   gap: 15px;
+  @include media-mobile {
+    display: none;
+  }
 }

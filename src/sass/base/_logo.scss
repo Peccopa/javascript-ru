@@ -1,0 +1,24 @@
+.logo {
+  // display: block;
+  // cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+// .logo-svg {
+//   // display: block;
+//   cursor: pointer;
+// }
+
+.logo-object {
+  @include media-mobile {
+    width: 160px;
+  }
+}
+
+.logo-svg:hover {
+  .logo-path {
+    @extend %transition;
+    fill: $color-primary;
+  }
+}
