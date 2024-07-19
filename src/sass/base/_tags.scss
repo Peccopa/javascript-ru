@@ -6,10 +6,12 @@
 }
 
 .tag {
+  cursor: pointer;
   border-radius: 90px;
   padding: 0 14px;
   @include font($size: 1.3rem, $height: 2.8rem, $weight: normal);
   &_selected {
+    border: 1px solid transparent;
     background-color: $color-primary;
     color: $color-light;
   }
@@ -17,6 +19,7 @@
     border: 1px solid $color-border;
   }
   &_colored {
+    border: 1px solid transparent;
     background-color: $color-tag;
   }
 }
