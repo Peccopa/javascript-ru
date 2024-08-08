@@ -3,6 +3,7 @@
 // module
 
 import { Article } from './js/Article.js';
+import { Modal } from './js/Modal.js';
 import { data } from './js/Data.js';
 
 // console.log(Article);
@@ -14,6 +15,7 @@ window.onload = function () {
   console.log('Hello, worm!');
   addTagsClickHandler();
   if (data) {
+    renderArticlesToDom();
   }
 };
 
@@ -61,4 +63,25 @@ const filterStrategiesBySelectedTag = (selectedTag) => {
         strategy.classList.remove('strategy_hidden');
     });
   });
+};
+
+const renderArticlesToDom = () => {
+  let strategiesWrapper = getStrategiesWrapper();
+  generateArticles(data).forEach((article) => {
+    strategiesWrapper.append(article.generateArticle());
+  });
+};
+
+const getStrategiesWrapper = () => {
+  const strategiesContainer = document.querySelector('.strategy-wrapper');
+  strategiesContainer.innerHTML = '';
+  return strategiesContainer;
+};
+
+const generateArticles = (data) => {
+  let articles = [];
+  data.forEach((article) => {
+    articles.push(new Article(article));
+  });
+  return articles;
 };
