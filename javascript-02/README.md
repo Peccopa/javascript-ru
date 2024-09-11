@@ -1,2 +1,0 @@
-# javascript-02
-
