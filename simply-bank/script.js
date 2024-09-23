@@ -147,4 +147,78 @@ const lazyImagesObserver = new IntersectionObserver(loadImages, {
   threshold: 0.7,
 });
 lazyImages.forEach(image => lazyImagesObserver.observe(image));
-console.log(lazyImages);
+// console.log(lazyImages);
+
+// Slider
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+const dotContainer = document.querySelector('.dots');
+
+const slidesNumber = slides.length;
+
+const createDots = function () {
+  slides.forEach(function (_, index) {
+    dotContainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class="dots__dot" data-slide="${index}"><button>`
+    );
+  });
+};
+
+createDots();
+
+const activateCurrentDot = function (slide) {
+  document
+    .querySelectorAll('.dots__dot')
+    .forEach(dot => dot.classList.remove('dots__dot--active'));
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add('dots__dot--active');
+};
+
+const moveToSlide = function (slide) {
+  slides.forEach((s, index) => {
+    s.style.transform = `translateX(${(index - slide) * 100}%)`;
+  });
+  activateCurrentDot(slide);
+};
+
+moveToSlide(0);
+
+const nextSlide = function () {
+  if (currentSlide === slidesNumber - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide += 1;
+  }
+  moveToSlide(currentSlide);
+};
+
+btnRight.addEventListener('click', nextSlide);
+
+const previousSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = slidesNumber - 1;
+  } else {
+    currentSlide -= 1;
+  }
+  moveToSlide(currentSlide);
+};
+
+btnLeft.addEventListener('click', previousSlide);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowRight') nextSlide();
+  if (e.key === 'ArrowLeft') previousSlide();
+});
+
+dotContainer.addEventListener('click', function (e) {
+  if (e.target.classList.contains('dots__dot')) {
+    const slide = e.target.dataset.slide;
+    moveToSlide(slide);
+  }
+});
