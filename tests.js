@@ -1,17 +1,11 @@
-/**
- * Returns the first non repeated char in the specified strings otherwise returns null.
- *
- * @param {string} str
- * @return {string}
- *
- * @example:
- *   'The quick brown fox jumps over the lazy dog' => 'T'
- *   'abracadabra'  => 'c'
- *   'entente' => null
- */
-function findFirstSingleChar(str) {
-  // return str.split('').map((e)=>{});
-  // throw new Error('Not implemented');
-}
+const Person = function (firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+};
 
-console.log(findFirstSingleChar('abracadabra'));
+Person.prototype.printPerson = function () {
+  return this.firstName + ' ' + this.lastName;
+};
+
+const johnSilver = new Person('John', 'Silver');
+console.log(johnSilver.printPerson());
