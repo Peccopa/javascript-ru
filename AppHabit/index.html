@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Habit App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="panel">
+        <img class="logo" src="./images/logo.svg" alt="logo" />
+        <nav class="menu">
+          <div class="menu__list"></div>
+          <button class="menu__add" onclick="togglePopup()">
+            <img src="./images/add.svg" alt="add" />
+          </button>
+        </nav>
+      </div>
+      <div class="content">
+        <header class="header">
+          <h1 class="title-h1">Рush-ups</h1>
+          <div class="progress">
+            <div class="progress__text">
+              <div class="progress__name">Progress</div>
+              <div class="progress__percent">80%</div>
+            </div>
+            <div class="progress__bar">
+              <div class="progress__cover-bar"></div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div id="days"></div>
+          <div class="habit">
+            <div class="habit__day">Day 2</div>
+            <form class="habit__form" onsubmit="addDays(event)">
+              <input
+                class="input"
+                name="comment"
+                type="text"
+                placeholder="Comment"
+              />
+              <img
+                class="input__icon"
+                src="./images/comment.svg"
+                alt="comment"
+              />
+              <button class="ready-button" type="submit">Ready</button>
+            </form>
+          </div>
+        </main>
+      </div>
+      <div class="cover cover_hidden">
+        <div class="popup">
+          <h2 class="title-h2">New habit</h2>
+          <div class="icon-label">Icon</div>
+          <div class="icon_select">
+            <button class="icon icon_active" onclick="setIcon(this, 'sport')">
+              <img src="./images/sport.svg" alt="sport" />
+            </button>
+            <button class="icon" onclick="setIcon(this, 'water')">
+              <img src="./images/water.svg" alt="water" />
+            </button>
+            <button class="icon" onclick="setIcon(this, 'food')">
+              <img src="./images/food.svg" alt="food" />
+            </button>
+          </div>
+          <form class="popup__form" onsubmit="addHabit(event)">
+            <input class="input" type="text" name="name" placeholder="Name" />
+            <input type="text" name="icon" hidden value="sport" />
+            <input
+              class="input"
+              type="number"
+              name="target"
+              placeholder="Target"
+            />
+            <button type="submit" class="button ready-button">Add</button>
+          </form>
+          <button class="popup__close" onclick="togglePopup()">
+            <img src="./images/close.svg" alt="close" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
