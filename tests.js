@@ -1,11 +1,13 @@
-const Person = function (firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-};
+function multiply(a, b) {
+  return a * b; // 
+}
 
-Person.prototype.printPerson = function () {
-  return this.firstName + ' ' + this.lastName;
-};
+function square(n) {
+  return multiply(n, n);
+}
 
-const johnSilver = new Person('John', 'Silver');
-console.log(johnSilver.printPerson());
+function printSquare() {
+  console.log(square(42)); 
+}
+
+printSquare();

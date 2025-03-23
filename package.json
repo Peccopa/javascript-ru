@@ -1,0 +1,22 @@
+{
+  "name": "javascript-ru",
+  "version": "1.0.0",
+  "description": "![2024-04-26](https://peccopa.github.io/javascript-ru/dices-game/dices-game.jpg) >Practicing skills: DOM - https://peccopa.github.io/javascript-ru/dices-game - ***JAVASCRIPT, CSS, HTML*** ___ ### branch: modal-window ![2024-04-11](https://github.com/Peccopa/javascript-ru/assets/119999253/24641a55-a635-42d1-a9aa-6ad0ac9087e2) >Practicing skills: DOM   >UI-Components, active cross/Esc, overlay missclick - https://peccopa.github.io/javascript-ru/modal-window - ***JAVASCRIPT, CSS, HTML*** ___ ### branch: guess-number ![2024-04-11](https://github.com/Peccopa/javascript-ru/assets/119999253/deb73192-1e95-45a4-82fb-ff1f869eb223) >Practicing skills: DOM - https://peccopa.github.io/javascript-ru/guess-number - ***JAVASCRIPT, CSS, HTML*** ___",
+  "main": "tests.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

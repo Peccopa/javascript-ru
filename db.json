@@ -1,0 +1,17 @@
+{
+  "employees": [
+    { "id": 1, "name": "Biba", "salary": 2000, "active": true },
+    { "id": 2, "name": "Boba", "salary": 1000, "active": false }
+  ],
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
