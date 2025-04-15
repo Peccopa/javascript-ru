@@ -3,14 +3,30 @@
     {
       "id": "1",
       "name": "Biba",
+      "role": "manager",
       "salary": 2000,
       "active": true
     },
     {
       "id": "2",
       "name": "Boba",
+      "role": "manager",
       "salary": 1000,
       "active": false
+    },
+    {
+      "id": "3",
+      "name": "Andy",
+      "role": "mover",
+      "salary": 5000,
+      "active": true
+    },
+    {
+      "id": "4",
+      "name": "Claus",
+      "role": "developer",
+      "salary": 8000,
+      "active": true
     }
   ],
   "posts": [
@@ -26,6 +42,11 @@
     }
   ],
   "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
     {
       "id": "2",
       "text": "another comment about post 1",

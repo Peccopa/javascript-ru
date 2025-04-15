@@ -1,13 +1,5 @@
-function multiply(a, b) {
-  return a * b; // 
+function monkeyCount(n) {
+  return new Array(n).fill(0).reduce((a, v) => (v = a + 1));
 }
 
-function square(n) {
-  return multiply(n, n);
-}
-
-function printSquare() {
-  console.log(square(42)); 
-}
-
-printSquare();
+console.log(monkeyCount(5));
