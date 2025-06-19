@@ -1,0 +1,1 @@
+"minifyJS": "uglifyjs distr_js/1.js --compress --mangle --warn --output scripts.min.js"
