@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Favorite fruit start</title>
+    <style>
+      /* input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:valid {
+        border: 2px solid black;
+      } */
+
+      body {
+        font: 1em sans-serif;
+        width: 200px;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      p * {
+        display: block;
+      }
+
+      input[type='email'] {
+        -webkit-appearance: none;
+        appearance: none;
+
+        width: 100%;
+        border: 1px solid #333;
+        margin: 0;
+
+        font-family: inherit;
+        font-size: 90%;
+
+        box-sizing: border-box;
+      }
+
+      /* Это стили для не валидных полей */
+      input:invalid {
+        border-color: #900;
+        background-color: #fdd;
+      }
+
+      input:focus:invalid {
+        outline: none;
+      }
+
+      /* Это стили для кастомных сообщений об ошибке */
+      .error {
+        width: 100%;
+        padding: 0;
+
+        font-size: 80%;
+        color: white;
+        background-color: #900;
+        border-radius: 0 0 5px 5px;
+
+        box-sizing: border-box;
+      }
+
+      .error.active {
+        padding: 0.3em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <form>
+      <label for="choose">Would you prefer a banana or a cherry?</label>
+      <input id="choose" name="i_like" />
+      <button>Submit</button>
+    </form> -->
+
+    <!-- <form>
+      <label for="mail"
+        >I would like you to provide me with an e-mail address:</label
+      >
+      <input type="email" id="mail" name="mail" />
+      <button>Submit</button>
+    </form> -->
+
+    <form novalidate>
+      <p>
+        <label for="mail">
+          <span>Please enter an email address:</span>
+          <input type="email" id="mail" name="mail" required minlength="8" />
+          <span class="error" aria-live="polite"></span>
+        </label>
+      </p>
+      <button>Submit</button>
+    </form>
+
+    <script>
+      // const email = document.getElementById('mail');
+      // email.addEventListener('input', function (event) {
+      //   console.log(email.validity);
+
+      //   if (email.validity.typeMismatch) {
+      //     email.setCustomValidity('I am expecting an e-mail address!');
+      //   } else {
+      //     email.setCustomValidity('');
+      //   }
+      // });
+
+      // Существуют разные способы получить DOM-узел; здесь мы определяем саму форму и
+      // поле ввода email и элемент span, в который поместим сообщение об ошибке
+      const form = document.getElementsByTagName('form')[0];
+      const email = document.getElementById('mail');
+      const emailError = document.querySelector('#mail + span.error');
+      email.addEventListener('input', function (event) {
+        // Каждый раз, когда пользователь что-то вводит,
+        // мы проверяем, являются ли поля формы валидными
+        console.log(email.validity);
+        if (email.validity.valid) {
+          // Если на момент валидации какое-то сообщение об ошибке уже отображается,
+          // если поле валидно, удаляем сообщение
+          emailError.textContent = ''; // Сбросить содержимое сообщения
+          emailError.className = 'error'; // Сбросить визуальное состояние сообщения
+        } else {
+          // Если поле не валидно, показываем правильную ошибку
+          showError();
+        }
+      });
+
+      form.addEventListener('submit', function (event) {
+        // Если поле email валдно, позволяем форме отправляться
+        console.log(email.validity);
+        if (!email.validity.valid) {
+          // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
+          showError();
+          // Затем предотвращаем стандартное событие отправки формы
+          event.preventDefault();
+        }
+      });
+
+      function showError() {
+        if (email.validity.valueMissing) {
+          // Если поле пустое,
+          // отображаем следующее сообщение об ошибке
+          emailError.textContent = 'You need to enter an e-mail address.';
+        } else if (email.validity.typeMismatch) {
+          // Если поле содержит не email-адрес,
+          // отображаем следующее сообщение об ошибке
+          emailError.textContent =
+            'Entered value needs to be an e-mail address.';
+        } else if (email.validity.tooShort) {
+          // Если содержимое слишком короткое,
+          // отображаем следующее сообщение об ошибке
+          emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
+        }
+        // Задаём соответствующую стилизацию
+        emailError.className = 'error active';
+      }
+    </script>
+  </body>
+</html>

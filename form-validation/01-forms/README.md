@@ -1,0 +1,1 @@
+https://www.youtube.com/watch?v=4pEfCpJpPTg&list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL&index=39&ab_channel=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%9B%D0%B0%D0%BC%D0%BA%D0%BE%D0%B2%E2%80%94FriendlyFrontend
