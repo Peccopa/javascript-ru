@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Сердце Пармы — Вечная земля</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo">Сердце Пармы</div>
+        <nav><a href="#about">О романе</a></nav>
+      </header>
+
+      <!-- Параллакс сцена -->
+      <section class="parallax" aria-label="Campfire scene with depth">
+        <div
+          class="layer layer-back"
+          data-speed="0.1"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80');
+          "
+        ></div>
+        <div
+          class="layer layer-mountain"
+          data-speed="0.18"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80');
+          "
+        ></div>
+        <div
+          class="layer layer-forest"
+          data-speed="0.25"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1601758124096-3c28b63a3d31?auto=format&fit=crop&w=1800&q=80');
+          "
+        ></div>
+        <div class="layer layer-fog" data-speed="0.3"></div>
+        <div
+          class="layer layer-camp"
+          data-speed="0.35"
+          style="background-image: url('warriors.png')"
+        ></div>
+        <div class="fire-glow" data-speed="0.5"></div>
+
+        <div class="hero">
+          <h1>Сердце Пармы</h1>
+          <p class="tagline">
+            Борьба веры и крови, где земля выбирает, кому принадлежать.
+          </p>
+          <a href="#about" class="btn">Читать отрывок</a>
+        </div>
+      </section>
+
+      <main id="about">
+        <div class="panel">
+          <h2>Отрывок из романа</h2>
+          <p>
+            «…И глядели они друг на друга через дым костра, не видя врага — видя
+            брата. Тот, кто держал меч, и тот, кто держал идола, понимали, что
+            земля под ними одна, и кровь их течёт в одной реке — в сердце
+            Пармы…»
+          </p>
+          <p>Алексей Иванов, <em>Сердце Пармы</em></p>
+        </div>
+
+        <!-- Слайдер -->
+        <section class="slider">
+          <button class="prev">&#10094;</button>
+          <div class="slides">
+            <img
+              src="man.png"
+              alt="Пермяк"
+            />
+            <img
+              src="woman.png"
+              alt="Пермячка"
+            />
+          </div>
+          <button class="next">&#10095;</button>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

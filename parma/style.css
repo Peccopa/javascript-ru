@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Ruslan Display', cursive;
+  background-color: #0a0a0a;
+  color: #eee;
+  overflow-x: hidden;
+  letter-spacing: 0.03em;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+}
+.logo {
+  color: #ffb86b;
+  font-size: 1.3rem;
+}
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  opacity: 0.8;
+}
+.topbar a:hover {
+  opacity: 1;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+.layer-back {
+  filter: brightness(0.35) blur(1px);
+}
+.layer-mountain {
+  filter: brightness(0.5);
+}
+.layer-forest {
+  filter: brightness(0.7);
+}
+.layer-camp {
+  filter: brightness(0.9);
+}
+
+.layer-fog {
+  background: url('https://i.ibb.co/mN7bRbc/fog1.png'),
+    url('https://i.ibb.co/mN7bRbc/fog1.png');
+  background-size: 200% 100%;
+  animation: fogmove 60s linear infinite;
+  opacity: 0.25;
+}
+@keyframes fogmove {
+  from {
+    background-position: 0 0, 100% 0;
+  }
+  to {
+    background-position: -200% 0, 0 0;
+  }
+}
+
+.fire-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 75%,
+    rgba(255, 140, 60, 0.4),
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  animation: flicker 3s infinite ease-in-out;
+  pointer-events: none;
+}
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 10;
+  top: 40%;
+  text-align: center;
+  color: #ffd;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  padding: 0 1rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 0.3rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(90deg, #ffb86b, #ff8a6b);
+  color: #111;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 138, 107, 0.3);
+}
+
+.panel {
+  max-width: 800px;
+  margin: 3rem auto 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ---- Слайдер ---- */
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  height: 500px;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
