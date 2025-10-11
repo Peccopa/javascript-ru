@@ -13,16 +13,23 @@
 
 // Quick Sort
 // Iteration Method - O(log*n)
-const arr = [
+const array1 = [
   0, 3, 2, 5, 6, 8, 1, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 6, 2, 35, 6, 3,
   32,
 ];
 
-function quickSort(array) {
-  return array;
+function quickSort1(arr) {
+  if (arr.length === 0) return [];
+  const left = [];
+  const right = [];
+  const center = arr[0];
+
+  for (let i = 1; i < arr.length; i += 1) {
+    if (arr[i] < center) left.push(arr[i]);
+    else right.push(arr[i]);
+  }
+  return [...quickSort1(left), center, ...quickSort1(right)];
 }
 
-console.log(quickSort(arr));
+console.log(quickSort1(array1));
 
-// console.log(quickSort.toString());
-// console.log(typeof undefined);

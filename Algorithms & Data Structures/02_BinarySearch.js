@@ -15,13 +15,9 @@ function binarySearchIterationMethod(arr, item) {
   while (left <= right) {
     mid = Math.floor((right + left) / 2);
 
-    if (arr[mid] === item) {
-      return mid;
-    } else if (arr[mid] > item) {
-      right = mid - 1;
-    } else {
-      left = mid + 1;
-    }
+    if (arr[mid] === item) return mid;
+    else if (arr[mid] > item) right = mid - 1;
+    else left = mid + 1;
   }
 
   return -1;
