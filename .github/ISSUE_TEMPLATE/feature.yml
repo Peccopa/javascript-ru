@@ -1,31 +1,32 @@
-name: Task
-description: Create a new task
-title: ''
-labels: []
+name: ✨ Feature request
+description: 'Propose a new feature (commit type: feat)'
+title: "feat(scope): short description"
+labels: ["enhancement"]
 body:
-  - type: dropdown
-    id: type
+  - type: markdown
     attributes:
-      label: Type
-      options:
-        - feat
-        - fix
-        - chore
-        - refactor
-    validations:
-      required: true
+      value: |
+        ## ✨ Feature Request
+
+        Commit type: **feat**
 
   - type: input
-    id: ticket
+    id: scope
     attributes:
-      label: Ticket number
-      placeholder: RSS-AR-123
+      label: Scope
+      placeholder: auth / dashboard / api
     validations:
       required: true
 
   - type: textarea
-    id: description
+    id: problem
     attributes:
-      label: Description
+      label: Problem
+      description: What problem does this solve?
     validations:
       required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution

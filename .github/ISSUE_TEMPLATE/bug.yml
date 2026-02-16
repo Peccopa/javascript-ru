@@ -1,0 +1,26 @@
+name: 🐛 Bug report
+description: 'Report a bug (commit type: fix)'
+title: 'fix(scope): short description'
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Commit type: **fix**
+
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: auth / ui / api
+      validations:
+        required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+      validations:
+        required: true
