@@ -1,12 +1,31 @@
-name: Feature
-description: New feature request
-title: '[feat]: '
-labels: ['type: feat']
+name: Task
+description: Create a new task
+title: ''
+labels: []
 body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - feat
+        - fix
+        - chore
+        - refactor
+    validations:
+      required: true
+
+  - type: input
+    id: ticket
+    attributes:
+      label: Ticket number
+      placeholder: RSS-AR-123
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:
       label: Description
-      placeholder: Describe the feature
     validations:
       required: true
