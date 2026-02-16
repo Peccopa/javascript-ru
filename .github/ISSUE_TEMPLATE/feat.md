@@ -1,7 +1,7 @@
 ---
 name: ✨ New Feature
 about: Propose a new feature or enhancement
-title: "[FEAT] "
+title: "feat: "
 labels: enhancement
 assignees: ''
 ---
