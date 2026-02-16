@@ -16,12 +16,26 @@
 const array = [1, 4, 5, 8, 5, 1, 2, 7, 5, 2, 11];
 
 let count = 0; // считаем итерации
-function linearSearch(array, item) {
-  for (let i = 0; i < array.length; i += 1) {
+function linearSearch1(arr, item) {
+  for (let i = 0; i < arr.length; i += 1) {
     count += 1;
-    if (array[i] === item) return i; // возвращаем индекс элемента
+    if (arr[i] === item) return i; // возвращаем индекс элемента
   }
   return null; // в массиве нет искомого элемента
 }
-console.log(`index = ${linearSearch(array, 11)}`);
+console.log(`index = ${linearSearch1(array, 11)}`);
 console.log(`count = ${count}`);
+
+// ==================
+
+function linearSearch2(arr, item) {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (item === arr[i]) return i;
+  }
+  return -1;
+}
+
+console.log(linearSearch2(array, 11));
+
+
+// рекурсивную версию линейного поиска

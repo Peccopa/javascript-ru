@@ -1,0 +1,12 @@
+name: Feature
+description: New feature request
+title: '[feat]: '
+labels: ['type: feat']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Describe the feature
+    validations:
+      required: true

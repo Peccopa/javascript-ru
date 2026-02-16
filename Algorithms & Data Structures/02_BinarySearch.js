@@ -13,7 +13,8 @@ function binarySearchIterationMethod(arr, item) {
   let mid;
 
   while (left <= right) {
-    mid = Math.floor((right + left) / 2);
+    // mid = Math.floor((right + left) / 2);
+    mid = left + Math.floor((right - left) / 2); // Это предотвращает потенциальные проблемы с переполнением.
 
     if (arr[mid] === item) return mid;
     else if (arr[mid] > item) right = mid - 1;
@@ -77,3 +78,5 @@ console.log(binarySearchRecursiveMethod(arr, 5)); // 6
 
 // Binary Search
 // Recursive Method - test
+
+// =======================
