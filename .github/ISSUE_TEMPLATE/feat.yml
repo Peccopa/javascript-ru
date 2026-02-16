@@ -8,6 +8,6 @@ body:
     id: description
     attributes:
       label: Feature description
-      placeholder: 'What will be added and why is it important?'
+      placeholder: 'Describe the feature and why it is needed'
     validations:
       required: true
