@@ -1,14 +1,13 @@
 name: ✨Feature
-description: Добавление новой функциональности
+description: Add a new feature
 title: 'feat: '
-labels: ['enhancement', 'feature']
+labels: ['feature']
 
 body:
   - type: textarea
     id: description
     attributes:
-      label: Описание фичи
-      placeholder: 'Что будет добавлено и почему это важно?'
+      label: Feature description
+      placeholder: 'What will be added and why is it important?'
     validations:
       required: true
-
