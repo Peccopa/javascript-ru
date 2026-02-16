@@ -1,0 +1,51 @@
+name: 🚀 Feature Request
+description: Предложение новой функциональности для проекта
+title: "feat: "
+labels: ["enhancement", "feature"]
+assignees: []
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Краткое описание фичи
+      placeholder: "Кратко, что за новая функциональность..."
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Мотивация / зачем нужна фича
+      placeholder: "Объясните, почему это нужно и какой кейс закрывает"
+      required: true
+
+  - type: textarea
+    id: specification
+    attributes:
+      label: Техническая спецификация / детали реализации
+      placeholder: "Какие изменения нужны, API, интерфейс, UX и т.д."
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативные решения
+      placeholder: "Если были другие варианты реализации, укажите их"
+      required: false
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Влияние на проект
+      options:
+        - "Малое"
+        - "Среднее"
+        - "Существенное"
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительная информация
+      placeholder: "Скриншоты, ссылки на документацию, примеры..."
+      required: false

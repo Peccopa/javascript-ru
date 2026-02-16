@@ -1,5 +1,5 @@
 ---
-name: ✨ New Feature
+name: ✨ Feature
 about: Propose a new feature or enhancement
 title: "feat: "
 labels: enhancement
