@@ -1,21 +1,4 @@
 name: ✨Feature
 description: Добавление новой функциональности
 title: 'feat: '
-labels: ['enhancement', 'feature']
-
-body:
-  - type: input
-    id: summary
-    attributes:
-      label: Краткое описание
-      placeholder: 'Что будет добавлено?'
-    validations:
-      required: true
-
-  - type: textarea
-    id: motivation
-    attributes:
-      label: Зачем нужна эта фича?
-      placeholder: 'Почему это важно?'
-    validations:
-      required: true
+labels: ['feature']
